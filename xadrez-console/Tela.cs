@@ -17,12 +17,19 @@ namespace xadrez_console
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
+
+            if (!partida.terminada)
+            {
+
             if (partida.xeque)
             {
             Console.WriteLine("XEQUE!");
 
             }
+                Console.WriteLine("XUQUEMATE!");
+                Console.WriteLine("Vencedor: " + partida.jogadorAtual);
             
+            }
         }
 
 
