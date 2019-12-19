@@ -17,6 +17,11 @@ namespace xadrez_console
             imprimirPecasCapturadas(partida);
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.turno);
+            if (partida.xeque)
+            {
+            Console.WriteLine("XEQUE!");
+
+            }
             
         }
 
@@ -28,7 +33,10 @@ namespace xadrez_console
             imprimirConjunto(partida.pecasCapturadas(Cor.Branca));
             Console.WriteLine();
             Console.Write("Pretas: ");
+            ConsoleColor aux = Console.ForegroundColor;
+            Console.ForegroundColor = ConsoleColor.Yellow;
             imprimirConjunto(partida.pecasCapturadas(Cor.Preta));
+            Console.ForegroundColor = aux;
             Console.WriteLine();
         }
 

@@ -27,6 +27,10 @@ namespace xadrez_console.tabuleiro
             qteMovimentos++;
         }
 
+        public void decrementarQteMovimentos()
+        {
+            qteMovimentos--;
+        }
 
         public bool existeMovimentosPossiveis()
         {
@@ -49,6 +53,7 @@ namespace xadrez_console.tabuleiro
         {
             return movimentosPossiveis()[pos.linha, pos.coluna];
         }
+
 
 
         public abstract bool[,] movimentosPossiveis();
